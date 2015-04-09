@@ -127,7 +127,7 @@ def bootstrap(tmpdir=None):
 
         # Execute the included pip and use it to install the latest pip and
         # setuptools from PyPI
-        sys.exit(pip.main(["install", "--upgrade", '--install-option="--prefix=/home/phablet/python"'] + packages + args))
+        sys.exit(pip.main(["install", "--upgrade", "--user"] + packages + args))
     finally:
         # Remove our temporary directory
         if delete_tmpdir and tmpdir:
